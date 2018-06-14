@@ -35,6 +35,47 @@
 	line-height: normal;
 }
 
+/* burger --------------------------------------------------------------------------------------------------------------- */
+
+.burger {
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	height: max-content;
+	width: max-content;
+}
+
+.burger-line{
+	width: 20px;
+	height: 1px;
+
+	background-color: #D7D7D7;
+	margin-bottom: 5px;
+	
+}
+/* cross --------------------------------------------------------------------------------------------------------------- */
+
+.cross {
+	display: none;
+	position: fixed;
+	left: 20px;
+	top: 25px;
+	height: max-content;
+	width: max-content;
+}
+
+.cross-line{
+	width: 20px;
+	height: 1px;
+
+	background-color: #D7D7D7;
+
+	transform: rotate(45deg);
+	
+}
+.cross-line:first-child {
+	transform: rotate(-45deg);
+}
 
 /* Header --------------------------------------------------------------------------------------------------------------- */
 
@@ -472,6 +513,8 @@ nav ol {
 }
 
 #mainav ul ul {
+	height: max-content;
+    top: 15px;
 	z-index: 9999;
 	position: absolute;
 	width: 180px;
@@ -1202,7 +1245,14 @@ table a,
 	.hoc {
 		max-width: 978px;
 	}
+	.burger {
+		display: none;
+	}
+	.cross {
+		display: none;
+	}
 }
+
 
 
 /* Mobile Devices --------------------------------------------------------------------------------------------------------------- */
@@ -1218,9 +1268,11 @@ table a,
 	#header #logo {
 		margin-top: 3px;
 	}
-	#mainav {}
-	#mainav ul {
+	#mainav {
 		display: none;
+	}
+	#mainav ul {
+		/* display: none; */
 	}
 	#mainav form {
 		display: block;
